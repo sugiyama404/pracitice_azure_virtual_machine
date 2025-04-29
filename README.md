@@ -1,0 +1,1 @@
+# pracitice_azure_virtual_machine
