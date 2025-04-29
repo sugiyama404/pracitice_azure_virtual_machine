@@ -19,6 +19,16 @@ resource "azurerm_resource_group" "resource_group" {
   location = var.location
 }
 
+# Resource Providers
+module "resource_providers" {
+  source = "./modules/resource_providers"
+
+  providers_to_register = [
+    "Microsoft.Compute",
+    "Microsoft.Network"
+  ]
+}
+
 # Create a virtual network
 module "namework" {
   source         = "./modules/network"
