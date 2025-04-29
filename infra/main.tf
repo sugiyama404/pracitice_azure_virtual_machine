@@ -30,7 +30,7 @@ module "resource_providers" {
 }
 
 # Create a virtual network
-module "namework" {
+module "network" {
   source         = "./modules/network"
   resource_group = azurerm_resource_group.resource_group
 }
@@ -39,7 +39,7 @@ module "namework" {
 module "vm" {
   source                       = "./modules/vm"
   resource_group               = azurerm_resource_group.resource_group
-  network_interface_web_nic_id = module.namework.network_interface_web_nic_id
+  network_interface_web_nic_id = module.network.network_interface_web_nic_id
   vm_size                      = var.vm_size
   admin_username               = var.admin_username
   vm_name                      = var.vm_name
