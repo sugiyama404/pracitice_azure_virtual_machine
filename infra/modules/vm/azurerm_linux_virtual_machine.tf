@@ -9,7 +9,7 @@ resource "azurerm_linux_virtual_machine" "web_vm" {
 
   admin_ssh_key {
     username   = var.admin_username
-    public_key = file("${module.path}/src/keypair.pub") # SSH鍵へのパスを適宜変更してください
+    public_key = file("${path.module}/src/keypair.pub") # SSH鍵へのパスを適宜変更してください
   }
 
   os_disk {
