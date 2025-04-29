@@ -191,7 +191,6 @@ cython_debug/
 # Icon must end with two \r
 Icon
 
-
 # Thumbnails
 ._*
 
@@ -344,5 +343,8 @@ override.tf.json
 terraform.rc
 
 memo.txt
+
+infra/modules/vm/src/keypair.pem
+infra/modules/vm/src/keypair.pub
 
 # End of https://www.toptal.com/developers/gitignore/api/python,flask,git,macos,terraform

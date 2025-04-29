@@ -10,26 +10,24 @@ variable "location" {
   default     = "Japan East"
 }
 
-variable "image_name" {
-  description = "image name"
-  type        = string
-  default     = "todoflask"
-}
-
 variable "subscription_id" {
   type = string
 }
 
-variable "username" {
-  description = "database username"
+variable "vm_size" {
+  description = "仮想マシンのサイズ"
   type        = string
+  default     = "Standard_B1s"
 }
 
-variable "password" {
-  description = "database password"
+variable "admin_username" {
+  description = "VMの管理者ユーザー名"
   type        = string
+  default     = "adminuser"
 }
 
-variable "database_name" {
-  type = string
+variable "vm_name" {
+  description = "仮想マシン名"
+  type        = string
+  default     = "web-server"
 }
